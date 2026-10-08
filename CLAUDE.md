@@ -10,6 +10,7 @@ usually the game does all the git work, so edits by hand should be rare and care
 |---|---|
 | `stages/<stage-id>.json` | A stage: data only (no images, sound or code) |
 | `stages/<stage-id>.replay` | The recorded clear that proves the stage can be beaten |
+| `stages/index.json` | Published stage IDs, versions, titles and lengths; written by the game on publish |
 | `LICENSE` | CC BY 4.0 by default: anyone may play, share and remix with credit |
 
 ## Rules
@@ -23,7 +24,10 @@ usually the game does all the git work, so edits by hand should be rare and care
   are rejected and the game will refuse the stage.
 - Keep `schema_version`, `sim_version` and `seed` as the game wrote them: changing them breaks
   the replay.
-- Keep the `stella-rain-stage` repository topic so the game can find these stages.
+- `stages/index.json` only points to stages, which are always fetched by tag. The game writes it;
+  a hand edit must list exactly the tags that exist.
+- The game finds this repository through its GitHub App installation. The `stella-rain-stage`
+  topic is needed only when stages are published with plain git; keep it if it is set.
 - Stage titles and descriptions are public and covered by the game's terms of use.
 
 ## Maintainers of `stella-rain/stage-template`
