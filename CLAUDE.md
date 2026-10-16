@@ -1,6 +1,6 @@
 # Stella Rain stage repository
 
-This repository holds Stella Rain stages: levels for the vertical shooter for phones and
+This repository holds Stella Rain stages: levels for Stella Rain, an action shooter for phones and
 computers, built in the game's stage editor and published here. It was created from
 `stella-rain/stage-template`; usually the game does all the git work, so edits by hand should
 be rare and careful.
